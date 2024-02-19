@@ -1,0 +1,22 @@
+<article>
+  <app-page-title [page_title]="title"></app-page-title>
+
+  <div class="content">
+    <div class="image-container" style="--bg-image: url('{{ photo_url }}')">
+      <img src="{{ photo_url }}" class="content-img-top" alt="Post image" />
+    </div>
+    <div class="content-body">
+      <div class="content-body-contents">
+        <div class="content-text-container">
+          <a [href]="content_url">Visit the original page</a>
+          <br />
+          <br />
+          {{ content_text }}
+        </div>
+        <p class="content-text">
+          <a [routerLink]="['/']"><small> << Back</small></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</article>

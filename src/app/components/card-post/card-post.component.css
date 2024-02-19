@@ -1,0 +1,81 @@
+.card {
+  background-color: var(--var-background-color);
+  color: var(--var-text-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    filter: drop-shadow(0rem 0rem 3px var(--var-text-color));
+  }
+}
+
+.card-body {
+  padding: 1rem;
+  position: relative;
+  background-color: inherit;
+}
+
+.card-body-contents {
+  position: relative;
+}
+
+.card-title {
+  font-size: large;
+}
+
+/* This will increase the card text content background brightness automatically, independently from the current background color */
+
+.card-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  filter: brightness(77%);
+  mix-blend-mode: screen;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card-body::before {
+    filter: brightness(10%);
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-image) no-repeat center center;
+  background-size: cover;
+  filter: blur(0.6rem);
+  user-select: none;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+}
+
+.card-separator > hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--var-text-color);
+}

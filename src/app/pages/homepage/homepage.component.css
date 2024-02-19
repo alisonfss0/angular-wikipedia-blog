@@ -1,0 +1,17 @@
+ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li {
+  width: 40vw;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 640px) {
+  li {
+    width: 100%;
+  }
+}

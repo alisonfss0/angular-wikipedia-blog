@@ -1,0 +1,21 @@
+<app-page-title [page_title]="blogTitle"></app-page-title>
+<ol *ngIf="wikipedia_pages.length > 0">
+  <li *ngFor="let page of wikipedia_pages" class="post">
+    <a
+      [routerLink]="['/content']"
+      [state]="{
+        title: page.title,
+        photo_url: page.imageUrl || getCatImageUrl(page.pageid),
+        content_text: page.extract,
+        content_url: page.url
+      }"
+    >
+      <app-card-post
+        [card_title]="page.title"
+        [card_text]="page.url"
+        card_small_text=""
+        [card_photo_url]="page.imageUrl || getCatImageUrl(page.pageid)"
+      ></app-card-post>
+    </a>
+  </li>
+</ol>

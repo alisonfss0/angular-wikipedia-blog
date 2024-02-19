@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/normalize.css/normalize.css";
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+:root {
+  --var-background-color: #eee;
+  --var-text-color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --var-background-color: black;
+    --var-text-color: #eee;
+  }
+}
+
+* {
+  font-family: "Fira Code", monospace;
+}
+
+main {
+  margin: 40px auto;
+  max-width: 95vw;
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0px 10px;
+}
+
+body {
+  background-color: var(--var-background-color);
+  color: var(--var-text-color);
+}

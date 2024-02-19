@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0.5rem;
+  background-color: var(--var-background-color);
+  color: var(--var-text-color);
+}
+
+.navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.navbar-title {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}

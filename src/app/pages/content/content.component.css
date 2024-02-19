@@ -1,0 +1,85 @@
+.content {
+  background-color: var(--var-background-color);
+  color: var(--var-text-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .content {
+    filter: drop-shadow(0rem 0rem 3px var(--var-text-color));
+  }
+}
+
+.content-body {
+  padding: 1rem;
+  position: relative;
+  background-color: inherit;
+}
+
+.content-body-contents {
+  position: relative;
+}
+
+.content-title {
+  font-size: large;
+}
+
+.content-text-container {
+  white-space: pre-wrap;
+}
+
+/* This will increase the content text content background brightness automatically, independently from the current background color */
+
+.content-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  filter: brightness(77%);
+  mix-blend-mode: screen;
+}
+
+@media (prefers-color-scheme: dark) {
+  .content-body::before {
+    filter: brightness(10%);
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-image) no-repeat center center;
+  background-size: cover;
+  filter: blur(0.6rem); /* Apply blur */
+  user-select: none;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Maintains aspect ratio */
+  position: relative; /* Make sure the image is positioned relative to its parent */
+}
+
+.content-separator > hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--var-text-color);
+}
