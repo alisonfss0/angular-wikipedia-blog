@@ -12,4 +12,4 @@ https://github.com/alisonfss0/angular-wikipedia-blog/assets/125560943/7b9f4db7-0
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Clone the repository, run `npm i` to install all dependencies, then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
